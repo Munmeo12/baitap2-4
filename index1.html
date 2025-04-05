@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 13</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: small;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 50px auto 50px;
+            grid-template-areas: 
+            "header header header header"
+            "aside1 content content aside2"
+            "footer footer footer footer";
+            height: 100vh;
+        }
+        .header{
+            grid-area: header;
+            background-color: palevioletred;
+            padding: 5px;
+        }
+        .aside1{
+            grid-area: aside1;
+            background-color: palegreen;
+        }
+        .content{
+            grid-area: content;
+            background-color: peru;
+            padding:10px;
+        }
+        .aside2{
+            grid-area: aside2;
+            background-color: aqua;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: darkcyan;
+            padding: 5px;
+        }
+        .grid div{
+            display: grid;
+            justify-content: center;
+        }
+        .grid .footer, .grid .header{
+            display: flex;
+            align-items: center;
+        }
+        @media (max-width: 1200px){
+            .grid{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 50px auto auto 50px;
+            grid-template-areas: 
+            "header header"
+            "content content"
+            "aside1 aside2"
+            "footer footer ";
+            }
+        }
+        @media (max-width:600px){
+            .grid{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: 50px auto auto auto 50px;
+            grid-template-areas: 
+            "header"
+            "content"
+            "aside1"
+            "aside2 "
+            "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index4.html">Bài 11</a> <a href="index3.html">Bài 12</a> <a href="index1.html">Bài 13</a> <a href="index2.html">Bài 14</a>
+    <div class="grid">
+        <div class="header">Header</div>
+        <div class="aside1">Aside1</div>
+        <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, labore recusandae. Dolores molestiae repellendus tempora vero sapiente laudantium molestias aliquid odit voluptatum. Ratione facere ipsa voluptatibus vitae maxime beatae aperiam.</div>
+        <div class="aside2">Aside2</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

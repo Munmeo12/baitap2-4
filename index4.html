@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bài 11</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      background-color: rgb(73, 73, 73);
+      width: 100%;
+      height: 70px;
+    }
+    .menu {
+      display: flex;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: groove 1px;
+    }
+    .menu li {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      justify-content: center; 
+      align-items: center;   
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+    }
+    .menu li:hover {
+      background-color: rgba(155, 151, 151, 0.5);
+      cursor: pointer;
+    }
+    .menu-icon {
+      display: none;
+      font-size: 25px;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width:600px){
+        .menu{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .container{
+            height: 100%;
+        }
+        .menu-icon{
+            display: block;
+            text-align: right;
+            padding: 4px;
+        }
+    .menu li{
+    padding: 20px;
+   }
+    }
+      </style>
+</head>
+<body>
+    <a href="index4.html">Bài 11</a> <a href="index3.html">Bài 12</a> <a href="index1.html">Bài 13</a> <a href="index2.html">Bài 14</a>
+  <div class="container">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <ul class="menu">
+      <li>Home</li>
+      <li>News</li>
+      <li>Contact</li>
+      <li>About</li>
+    </ul>
+  </div>
+</body>
+</html>
